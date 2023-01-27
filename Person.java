@@ -38,4 +38,31 @@ public class Person
         return BMI;
     }
 
+    /**
+     * 
+     * @param aBMI - Gets the BMI 
+     * @return - the health status of a person 
+     *           if they are underweight, healthy,
+     *           obese, or extremely obese
+     */
+    public String determineHealth(double aBMI) 
+    {
+        String health = "";
+
+        if (aBMI < 18.5) {
+            health = "Underweight";
+        } else if (aBMI >= 18.5 && aBMI < 25)
+        {
+            health = "Healthy";
+        } else if (aBMI >= 25 && aBMI < 30)
+        {
+            health = "Overweight";
+        } else if (aBMI >= 30 && aBMI < 40)
+        {
+            health = "Obese";
+        } else {
+            health = "Extremely obese";
+        }
+        return health;
+    }
 }
