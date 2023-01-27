@@ -65,4 +65,9 @@ public class Person
         }
         return health;
     }
+
+    public double recommendedWeight()
+    {
+        return Math.ceil((25 * Math.pow(heightInches, 2)) / 703);
+    }
 }
