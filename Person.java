@@ -66,8 +66,23 @@ public class Person
         return health;
     }
 
+    /**
+     * 
+     * @return - returns the recommended weight
+     */
     public double recommendedWeight()
     {
         return Math.ceil((25 * Math.pow(heightInches, 2)) / 703);
+    }
+
+    public String toSTring()
+    {
+        DecimalFormat df = new DecimalFormat("#,#0.0");
+
+        final double FOOT_IN_A_INCH = 0.0833333; // foor in an inch
+        double hightInFeet = heightInches * FOOT_IN_A_INCH; // convert height in inches to feet
+
+        return firstName + " " + lastName + " weighs " + weightPounds +
+               " pounds and is " + df.format(hightInFeet) + " feet tall!";
     }
 }
