@@ -6,31 +6,25 @@ This program calculates a persons BMI by getting the height and weight. It will 
 
 ## **Steps**
 **Enter first name:**
-<br>
-<img src="images/f-name.png" alt="" width="400"/>
-<br>
+![](images/f-name.png)
+
 **Enter last name:**
-<br>
-<img src="images/s-name.png" alt="" width="400"/>
-<br>
+![](images/s-name.png)
+
 **Enter height in inches:**
-<br>
-<img src="images/h-inches.png" alt="" width="400"/>
-<br>
+![](images/h-inches.png)
+
 **Enter weight in pounds:**
-<br>
-<img src="images/w-pounds.png" alt="" width="400"/>
-<br>
+![](images/w-pounds.png)
+
 **Show person's info:**
-<br>
-<img src="images/p-info.png" alt="" width="400"/>
-<br>
+![](images/p-info.png)
+
 **Show BMI**
-<br>
-<img src="images/bmi.png" alt="" width="400"/>
-<br>
+
+![](images/bmi.png)
+
 **Show Health status**
-<br>
-<img src="images/health-status.png" alt="" width="400"/>
-<br>
+![](images/health-status.png)
+
 
