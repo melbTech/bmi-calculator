@@ -4,6 +4,7 @@
  * @version - 1.0
  */
 
+import java.text.DecimalFormat;
 import java.util.Scanner;
 import javax.swing.JOptionPane;
 
@@ -15,6 +16,9 @@ public class BMIHealth
 
         // Call and store in a Person variable the method createPersonObject()
         thePerson = createPersonObject();
+
+        // Call the showBMI() method
+        showBMI(thePerson);
     }
 
     /**
@@ -33,7 +37,7 @@ public class BMIHealth
 
         // Ask user for their first & last name, height in inches and weight in pounds
         JOptionPane.showMessageDialog(null, 
-        "We;come to the BMI Calculator Program!");
+        "Welcome to the BMI Calculator Program!");
 
         firstName = JOptionPane.showInputDialog("Enter your first name: ");
         lastName = JOptionPane.showInputDialog("Enter your last name: ");
@@ -46,5 +50,35 @@ public class BMIHealth
         aPerson = new Person(firstName, lastName, height, weight);
 
         return aPerson;
+    }
+
+    /**
+     * @param anyPerson - call the domain class
+     */
+    public static void showBMI(Person anyPerson)
+    {
+        DecimalFormat df = new DecimalFormat("#,##0.00");
+
+        // Print the Person object received as a parameter
+        JOptionPane.showMessageDialog(null, anyPerson.toSTring());
+
+        // Calling and storing the return value of the method that calculates the person’s BMI
+        JOptionPane.showMessageDialog(null, "Your BMI is " + df.format(anyPerson.calculateBMI()));
+        /**
+         * Calling and storing the return value of the method that determines the person’s 
+         * health, then print that value.
+         */
+        JOptionPane.showMessageDialog(null, "You are " + anyPerson.determineHealth(anyPerson.calculateBMI()));
+        /**
+         * If the person's BMI is not considered "healthy" then call and store the
+        // return value of the method that calculates the person's recommended
+         */
+        if (anyPerson.determineHealth(anyPerson.calculateBMI()) != "Healthy")
+        {
+            JOptionPane.showMessageDialog(null, "Your recommended weight is " +
+            "Your recommended weight is " + df.format(anyPerson.recommendedWeight()));
+        }
+
+        JOptionPane.showMessageDialog(null, "Thanks for using the BMI calculator!");
     }
 }
